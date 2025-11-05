@@ -279,11 +279,23 @@ if (skillsContainer) {
 
 const experienceData = [
   {
+    id: "fsd",
+    title: "Jr. Full Stack Developer",
+    company: "Numerize AI",
+    date: "October 2025 - Present",
+    icon: "fas fa-code",
+    description: [
+      "Developing production-ready AI agents. Building and integrating RAG systems.",
+      "Designing and implementing automation workflows; managing deployment and post-deployment monitoring",
+      "Practicing Agile development for rapid iterations and continuous delivery",
+    ],
+  },
+  {
     id: "sc",
     title: "Developer Intern",
     company: "Numerize AI",
-    date: "July 2025 - Present",
-    icon: "fas fa-robot",
+    date: "June 2025 - September 2025",
+    icon: "fas fa-laptop",
     description: [
       "Currently contributing to the development of AI-powered solutions.",
       "Working with a team to build and deploy machine learning models.",
@@ -306,8 +318,8 @@ const experienceData = [
     id: "cw",
     title: "Vice President",
     company: "Code{X} - The Programming Club",
-    date: "June 2024 - Present",
-    icon: "fas fa-code",
+    date: "June 2024 - June 2025",
+    icon: "fas fa-university",
     description: [
       "Managed projects, organized workshops, hackathons, and coding competitions",
       "Oversaw operations, team coordination, and event execution",
