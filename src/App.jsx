@@ -31,10 +31,11 @@ function App() {
 
   const leadExperience = experience[0];
   const githubUser = "dhruval30";
+  const heatmapCacheKey = new Date().toISOString().slice(0, 13);
   const contributionGraphUrl =
     theme === "dark"
-      ? `https://ghchart.rshah.org/22c55e/${githubUser}`
-      : `https://ghchart.rshah.org/0f172a/${githubUser}`;
+      ? `https://ghchart.rshah.org/22c55e/${githubUser}?v=${heatmapCacheKey}`
+      : `https://ghchart.rshah.org/0f172a/${githubUser}?v=${heatmapCacheKey}`;
   const activityGraphUrl =
     theme === "dark"
       ? `https://github-readme-activity-graph.vercel.app/graph?username=${githubUser}&bg_color=00000000&color=94a3b8&line=22c55e&point=60a5fa&area=true&hide_border=true`
