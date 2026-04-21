@@ -142,7 +142,6 @@ function App() {
 
           <section id="work" className="space-y-5">
             <header>
-              <p className="section-kicker">Selected Projects</p>
               <h2 className="mt-3 font-display text-[clamp(2.7rem,8vw,7rem)] font-extrabold tracking-[-0.04em]">Work</h2>
             </header>
 
@@ -162,7 +161,7 @@ function App() {
                           className="h-full w-full object-cover"
                         />
                         <div className="absolute bottom-4 right-4 grid size-10 place-items-center rounded-full border border-white/20 bg-black/35 text-lg text-white backdrop-blur-sm">
-                          ↗
+                          ↗︎
                         </div>
                       </div>
 
@@ -191,7 +190,7 @@ function App() {
                               rel="noopener noreferrer"
                               className="outline-chip"
                             >
-                              GitHub ↗
+                              GitHub ↗︎
                             </a>
                           ) : null}
 
@@ -202,7 +201,7 @@ function App() {
                               rel="noopener noreferrer"
                               className="outline-chip"
                             >
-                              Live Demo ↗
+                              Live Demo ↗︎
                             </a>
                           ) : (
                             <span className="text-xs font-semibold uppercase tracking-[0.11em] text-slate-500 dark:text-slate-400">
@@ -220,7 +219,6 @@ function App() {
 
           <section id="about" className="space-y-5">
             <header>
-              <p className="section-kicker">My Story</p>
               <h2 className="mt-3 font-display text-[clamp(2.7rem,8vw,7rem)] font-extrabold tracking-[-0.04em]">About</h2>
             </header>
 
@@ -285,10 +283,10 @@ function App() {
 
                   <div className="mt-3 flex flex-wrap items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">
                     <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
-                      GitHub ↗
+                      GitHub ↗︎
                     </a>
                     <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
-                      LinkedIn ↗
+                      LinkedIn ↗︎
                     </a>
                   </div>
                 </div>
@@ -332,7 +330,6 @@ function App() {
 
           <section id="skills" className="space-y-5">
             <header>
-              <p className="section-kicker">Capabilities</p>
               <h2 className="mt-3 font-display text-[clamp(2.7rem,8vw,7rem)] font-extrabold tracking-[-0.04em]">Skills</h2>
             </header>
 
@@ -353,12 +350,11 @@ function App() {
           </section>
 
           <section id="contact" className="space-y-8 pb-10 pt-6 sm:space-y-10 sm:pt-10">
-            <p className="section-kicker">Get in Touch</p>
             <h2 className="font-display text-[clamp(3rem,10vw,9rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
               <a href={`mailto:${profile.email}`} className="hover:opacity-80">
                 Say hi!
                 <br />
-                Let&apos;s talk ↗
+                Let&apos;s talk ↗︎
               </a>
             </h2>
 
