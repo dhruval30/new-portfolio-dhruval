@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 246 245;
+  --bg-soft: 255 255 255;
+  --text: 17 19 24;
+  --muted: 82 87 96;
+  --line: 17 19 24;
+  --card: 255 255 255;
+  --spot-1: 237 134 40;
+  --spot-2: 72 117 255;
+  --spot-3: 36 197 154;
+}
+
+.dark {
+  --bg: 0 0 0;
+  --bg-soft: 0 0 0;
+  --text: 237 239 245;
+  --muted: 152 158 172;
+  --line: 255 255 255;
+  --card: 0 0 0;
+  --spot-1: 255 133 43;
+  --spot-2: 65 230 152;
+  --spot-3: 83 124 255;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply selection:bg-emerald-300/30 selection:text-inherit;
+  }
+
+  body {
+    font-family: "Manrope", sans-serif;
+    background: rgb(var(--bg));
+    color: rgb(var(--text));
+    @apply antialiased transition-colors duration-500;
+  }
+}
+
+@layer components {
+  .theme-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -30;
+    pointer-events: none;
+    background:
+      radial-gradient(55rem 55rem at 8% -18%, rgb(var(--spot-2) / 0.22), transparent 65%),
+      radial-gradient(42rem 42rem at 98% 6%, rgb(var(--spot-1) / 0.2), transparent 65%),
+      radial-gradient(28rem 28rem at 62% 118%, rgb(var(--spot-3) / 0.16), transparent 75%),
+      linear-gradient(180deg, rgb(var(--bg-soft)) 0%, rgb(var(--bg)) 100%);
+  }
+
+  .dark .theme-canvas {
+    background:
+      radial-gradient(58rem 58rem at 7% -18%, rgb(var(--spot-2) / 0.18), transparent 66%),
+      radial-gradient(44rem 44rem at 99% 5%, rgb(var(--spot-1) / 0.16), transparent 66%),
+      radial-gradient(30rem 30rem at 62% 118%, rgb(var(--spot-3) / 0.14), transparent 75%),
+      linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
+  }
+
+  .theme-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -20;
+    pointer-events: none;
+    opacity: 0.4;
+    background-image:
+      linear-gradient(rgb(var(--line) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--line) / 0.06) 1px, transparent 1px);
+    background-size: 120px 120px;
+    mask-image: radial-gradient(circle at 40% 12%, black, transparent 90%);
+  }
+
+  .theme-noise {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23999' fill-opacity='.3'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='72' cy='72' r='1'/%3E%3Ccircle cx='36' cy='124' r='1'/%3E%3Ccircle cx='118' cy='48' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/60 shadow-glow backdrop-blur-xl dark:border-white/20 dark:bg-black/70;
+  }
+
+  .section-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400;
+  }
+
+  .outline-chip {
+    @apply inline-flex items-center rounded-full border border-black/15 bg-white/70 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700 transition hover:-translate-y-px hover:border-black/30 dark:border-white/15 dark:bg-slate-950/50 dark:text-slate-200 dark:hover:border-white/40;
+  }
+
+  .marquee-shell {
+    @apply overflow-hidden border-y border-black/10 py-3 dark:border-white/10;
+  }
+
+  .marquee-track {
+    width: max-content;
+    display: flex;
+    animation: marquee-scroll 28s linear infinite;
+  }
+
+  .marquee-set {
+    @apply flex items-center;
+  }
+
+  .marquee-item {
+    @apply relative whitespace-nowrap px-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300;
+  }
+
+  .marquee-item::before {
+    content: "✦";
+    @apply mr-5 text-[9px] text-slate-400 dark:text-slate-500;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
