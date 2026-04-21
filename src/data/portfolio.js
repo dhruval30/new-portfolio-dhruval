@@ -26,20 +26,46 @@ export const valuePills = [
 
 export const skills = [
   {
-    category: "Programming Languages",
-    items: ["Python", "JavaScript", "Java", "Elixir"],
+    category: "Languages & Core Dev",
+    items: ["Python", "JavaScript", "Java", "Bash", "Node.js", "Linux", "MERN Stack"],
   },
   {
-    category: "Frameworks & Libraries",
-    items: ["Node.js / Express", "Flask / Django", "PyTorch", "TensorFlow"],
+    category: "Frameworks & AI",
+    items: [
+      "React",
+      "Express.js",
+      "Flask",
+      "Django",
+      "HTML/CSS",
+      "Machine Learning",
+      "Computer Vision",
+      "NLP",
+      "AI Agents",
+      "Agentic Development",
+      "Artificial Intelligence",
+      "Large Language Model",
+      "Agentic AI",
+      "Retrieval Augmented Generation",
+      "PyTorch",
+      "TensorFlow",
+    ],
   },
   {
-    category: "Tools & Technologies",
-    items: ["AWS", "Git & GitHub", "MongoDB", "DBMS", "Linux"],
+    category: "Databases & Cloud",
+    items: ["MongoDB", "PostgreSQL", "ArangoDB", "DBMS", "AWS", "GCP", "CI/CD"],
   },
   {
-    category: "Soft Skills",
-    items: ["Communication", "Leadership", "Management"],
+    category: "Collaboration & Tools",
+    items: [
+      "Git/GitHub",
+      "Jira",
+      "n8n",
+      "Leadership",
+      "Communication Skills",
+      "Project Management",
+      "Team Coordination",
+      "Management",
+    ],
   },
 ];
 
