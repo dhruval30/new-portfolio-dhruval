@@ -104,16 +104,18 @@ function App() {
                 {profile.about[0]}
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-2">
-                <a href={`mailto:${profile.email}`} className="outline-chip">
-                  {profile.email}
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">
+                <a href={`mailto:${profile.email}`} className="hover:text-slate-900 dark:hover:text-white">
+                  Email
                 </a>
-                <a href={profile.github} target="_blank" rel="noopener noreferrer" className="outline-chip">
+                <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
                   GitHub
                 </a>
-                <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="outline-chip">
+                <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
                   Resume
                 </a>
+                <span className="hidden h-3 w-px bg-black/20 dark:bg-white/20 sm:inline-block" />
+                <span className="normal-case tracking-normal">{profile.email}</span>
               </div>
             </div>
 
@@ -260,18 +262,34 @@ function App() {
                   </div>
                 </div>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <a href={`mailto:${profile.email}`} className="outline-chip">
-                    Email Me
-                  </a>
-                  <a
-                    href={profile.resume}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="outline-chip"
-                  >
-                    View Resume
-                  </a>
+                <div className="mt-6 rounded-2xl border border-black/10 bg-white/65 p-4 dark:border-white/10 dark:bg-black/45">
+                  <p className="section-kicker">Connect</p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <a
+                      href={`mailto:${profile.email}`}
+                      className="inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/15 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-emerald-700 transition hover:bg-emerald-500/25 dark:text-emerald-300"
+                    >
+                      Email Me
+                    </a>
+                    <a
+                      href={profile.resume}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-full border border-black/15 bg-white/70 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-700 transition hover:border-black/30 dark:border-white/15 dark:bg-slate-950/50 dark:text-slate-200 dark:hover:border-white/40"
+                    >
+                      View Resume
+                    </a>
+                  </div>
+
+                  <div className="mt-3 flex flex-wrap items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">
+                    <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
+                      GitHub ↗
+                    </a>
+                    <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
+                      LinkedIn ↗
+                    </a>
+                  </div>
                 </div>
               </div>
 
