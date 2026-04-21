@@ -388,7 +388,9 @@ function App() {
         </main>
 
         <footer className="mt-8 border-t border-black/10 py-5 text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500 dark:border-white/10 dark:text-slate-400">
-          © {new Date().getFullYear()} {profile.name} · Software Developer
+          <p>Made with ❤️ </p>
+          <br/>
+          © {new Date().getFullYear()} {profile.name}
         </footer>
       </div>
     </div>
