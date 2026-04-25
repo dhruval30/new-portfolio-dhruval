@@ -24,6 +24,17 @@ export const valuePills = [
   "Clean Engineering",
 ];
 
+export const spotifyPlaylists = [
+  {
+    label: "",
+    href: "https://open.spotify.com/playlist/55ilmkQY6amXGKWYbgvIL4?si=d041d383534c4a5b",
+  },
+  {
+    label: "",
+    href: "https://open.spotify.com/playlist/3DJi69STJaOy7zbLyNlLwz?si=f3b097d4a7c74e4f",
+  },
+];
+
 export const skills = [
   {
     category: "Languages & Core Dev",

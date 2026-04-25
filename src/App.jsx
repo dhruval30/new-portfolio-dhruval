@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { experience, profile, projects, skills, valuePills } from "./data/portfolio";
+import { experience, profile, projects, skills, spotifyPlaylists, valuePills } from "./data/portfolio";
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -379,6 +379,62 @@ function App() {
                 <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">
                   Resume
                 </a>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-2">
+            <div className="glass rounded-3xl p-4 sm:p-6">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  {/* <p className="section-kicker">Personal Cut</p> */}
+                  <h3 className="mt-2 text-xl font-bold text-slate-800 dark:text-slate-100 sm:text-2xl">
+                    I am really proud of these, so I put them here.
+                  </h3>
+                </div>
+                {/* <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-emerald-500/30 bg-emerald-500/15 text-emerald-600 dark:text-emerald-300">
+                  <span className="h-2.5 w-2.5 rounded-full bg-current" />
+                </span> */}
+              </div>
+
+              <div className="mt-4 grid gap-3 lg:grid-cols-2">
+                {spotifyPlaylists.map((playlist) => {
+                  const match = playlist.href.match(/playlist\/([a-zA-Z0-9]+)/);
+                  const embedSrc = match
+                    ? `https://open.spotify.com/embed/playlist/${match[1]}?utm_source=generator`
+                    : playlist.href;
+
+                  return (
+                    <div
+                      key={playlist.href}
+                      className="overflow-hidden rounded-2xl border border-black/10 bg-white/70 dark:border-white/10 dark:bg-black/45"
+                    >
+                      <div className="flex items-center justify-between border-b border-black/10 px-3 py-2 dark:border-white/10">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-emerald-600 dark:text-emerald-300">
+                          {playlist.label}
+                        </p>
+                        <a
+                          href={playlist.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                        >
+                          Open ↗︎
+                        </a>
+                      </div>
+                      <iframe
+                        src={embedSrc}
+                        width="100%"
+                        height="352"
+                        frameBorder="0"
+                        allowFullScreen
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        title={`Spotify playlist: ${playlist.label}`}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
